@@ -1,7 +1,27 @@
+/*___________________________________________________________________________
+Автор: Иевлев А.А. студент АПО-13
+
+Задача 5_4:
+Вычисление выражения.
+Дано выражение в инфиксной записи. Вычислить его, используя перевод выражения 
+в постфиксную запись. Выражение не содержит отрицительных чисел.
+Количество операций ≤ 100.
+_____________________________________________________________________________
+Формат входных данных.
+Строка, состоящая их символов “0123456789+/()*”
+Гарантируется, что входное выражение корректно, нет деления на 0, вычислимо 
+в целых числах. Деление целочисленное.
+
+Формат выходных данных.
+Значение выражения.
+___________________________________________________________________________*/
+
 #include <stdio.h>
 #include <string.h>
 #include <algorithm>
 #include <ctype.h>
+
+#define BUF_SIZE 1024
 
 template <typename T>
 class Stack{
@@ -36,9 +56,9 @@ template <typename T>
 void Stack<T>::clear(){
     T *t;
     delete []q;
-    t = new T[1024];
+    t = new T[BUF_SIZE];
     q=t;
-    cap_buf=1024;
+    cap_buf=BUF_SIZE;
     size_buf=0;
 }
 
@@ -104,49 +124,47 @@ int optype(char c){
     return -1;
 }
 
-
-int main(){
-    char s0[1024];
-    int  len, t, x, n = 0;
-    int a[1024];
+int inftopost(char *s, int *a, int &n){
     int d[6][7] = { {4, 1, 1, 1, 1, 1, 5},
                     {2, 2, 2, 1, 1, 1, 2},
                     {2, 2, 2, 1, 1, 1, 2},
                     {2, 2, 2, 2, 2, 1, 2},
                     {2, 2, 2, 2, 2, 1, 2},
                     {5, 1, 1, 1, 1, 1, 3} };
-
-
-    fgets(s0,1023,stdin);
-    len = strlen(s0);
-    s0[len++] = '|';
-
-    Stack<int> st;
+    int t,x,len;    
+    Stack <int> st;
     st.push_back(0);
+    len = strlen(s);  
+    s[len++] = '|';
 
     for(int i=0; i<len; i++){
-        if(s0[i]!=' '){
-            if(isdigit(s0[i])){
-                sscanf(s0+i,"%i",&t);
-                while(isdigit(s0[i+1])) i++;
+        if(s[i]!=' '){
+            if(isdigit(s[i])){
+                sscanf(s+i,"%i",&t);
+                while(isdigit(s[i+1])) i++;
                 a[n++]=t;
             } 
             else {
-                while(d[st.top_back()][optype(s0[i])] == 2){
+                while(d[st.top_back()][optype(s[i])] == 2){
                     x = st.pop_back();
                     a[n++] = -x;
                 }
-                if(d[st.top_back()][optype(s0[i])] == 1){
-                    st.push_back(optype(s0[i]));
+                if(d[st.top_back()][optype(s[i])] == 1){
+                    st.push_back(optype(s[i]));
                 }
-                if(d[st.top_back()][optype(s0[i])] == 3){
+                if(d[st.top_back()][optype(s[i])] == 3){
                     st.pop_back();
                 }
             } 
         }
     }
-
     st.clear();
+    return 0;
+}
+
+int solve(int *a, int n){
+    Stack<int> st;
+    int t,x,ans;
 
     for(int i=0; i<n; i++){
         if(a[i]>=0) st.push_back(a[i]);
@@ -169,8 +187,24 @@ int main(){
             }
         }
     }
+    ans = st.pop_back();
+    st.clear();
 
-    printf("%i\n",st.pop_back());
+    return ans;
+}
+
+int main(){
+    char s[BUF_SIZE];
+    int  ans, n = 0;
+    int a[BUF_SIZE];
+
+    fgets(s,BUF_SIZE-1,stdin);
+
+    inftopost(s, a, n);
+    
+    ans = solve(a, n);
+
+    printf("%i\n",ans);
     
     return 0;
 }
