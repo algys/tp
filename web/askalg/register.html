@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Starter Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="dist/css/askalg.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">AskAlg</a>
+        </div>
+
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <form class="navbar-form navbar-left">
+            <div class="form-group">
+                <input type="text" class="form-control" id="askalgSearch" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-primary">Find !</button>
+          </form>
+ <!--         
+          <form class="navbar-form navbar-right">
+            <div class="form-group form-group">
+              <input type="text" placeholder="Email" class="form-control">
+            </div>
+            <div class="form-group form-group">
+              <input type="password" placeholder="Password" class="form-control">
+            </div>
+            <button type="Log-In" class="btn btn-success btn">Sign in</button>
+          </form>
+  -->         
+          <form class="navbar-form navbar-right">
+            <button type="button" class="btn btn-success btn">
+              <span>Log In </span>
+              <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
+            </button>
+          </form>
+<!--
+          <div class="navbar-form navbar-right">
+            <img src="img/avatars/Caroline/35x35.jpg" class="img-rounded askalg-margin_right_5px">
+            <button type="button" class="btn btn-default btn">
+              <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Set
+            </button>
+            <button type="button" class="btn btn-default btn">
+              <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Out
+            </button>
+          </div>
+ -->        
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+
+    <div class="container askalg-main_container">
+    	<div class="row">
+  			
+  			<div class="col-md-8">
+          <div>
+              <label class="askalg-body_title">Registration</label>
+            </div>
+
+        	<form class="form-horizontal col-md-8">
+            
+            <div class="form-group">
+              <label class="col-md-3 control-label">Login</label>
+              <div class="col-md-9">
+                <input type="text" class="form-control" placeholder="Login">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-md-3 control-label">Email</label>
+              <div class="col-md-9">
+                <input type="email" class="form-control" placeholder="Email">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-md-3 control-label">NickName</label>
+              <div class="col-md-9">
+                <input type="text" class="form-control" placeholder="Nick">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-md-3 control-label">Password</label>
+              <div class="col-md-9">
+                <input type="password" class="form-control" placeholder="Password">
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label class="col-md-3 control-label">Repeat password</label>
+              <div class="col-md-9">
+                <input type="password" class="form-control" placeholder="Repeat password">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-md-3 control-label">Avatar</label>
+              <div class="col-md-9">
+                <input type="file" >
+              </div>
+            </div>
+  
+           <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                  <button type="submit" class="btn btn-default">Register</button>
+              </div>
+            </div>
+          </form>
+
+        </div>
+
+
+  			<div class="col-md-3 col-md-offset-1 askalg-right_block">
+          <div>
+            <div class="askalg-popular_tags">Popular Tags</div>
+            <div class="askalg-tags_shield">
+              <div>
+                <a href="#" class="askalg-margin_right_5px askalg-tags_perl">Perl</a>
+                <a href="#" class="askalg-margin_right_5px askalg-tags_python">Python</a>
+                <a href="#" class="askalg-margin_right_5px askalg-tags_ruby">Ruby</a>
+              </div>
+              <div>
+                <a href="#" class="askalg-margin_right_5px askalg-tags_mysql">MySql</a>
+                <a href="#" class="askalg-margin_right_5px askalg-tags_django">django</a>
+              </div>
+              <div>
+                <a href="#" class="askalg-margin_right_5px askalg-tags_mailru">Mail.Ru</a>
+                <a href="#" class="askalg-margin_right_5px askalg-tags_firefox">firefox</a>
+                <a href="#" class="askalg-margin_right_5px askalg-tags_voloshin">Voloshin</a>
+              </div>
+            </div>
+          </div>  
+          <div>
+            <div class="askalg-bestmembers">Best Members</div>
+            <div class="askalg-bestmembers_shield">
+              <div>
+                <a href="#"><u>Mr.Freeman</u></a>
+              </div>
+              <div>
+                <a href="#"><u>Dr.House</u></a>
+              </div>
+              <div>
+                <a href="#"><u>Bender</u></a>
+              </div>
+              <div>
+                <a href="#"><u>Queen Vectoria</u></a>
+              </div>
+              <div>
+                <a href="#"><u>A Ievlev</u></a>
+              </div>
+            </div>
+          </div> 
+        </div>
+
+		  </div>
+      
+    </div><!-- /.container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+ <!--  <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script> -->
+    <script src="dist/js/bootstrap.min.js"></script>
+  </body>
+</html>

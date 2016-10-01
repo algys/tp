@@ -1,0 +1,128 @@
+body {
+	padding-top: 50px;
+}
+.askalg-main_container {
+  margin-top: 40px;
+}
+
+.askalg-right_block {
+  height: 500px;
+}
+
+.askalg-body_title {
+  font-size: 300%;
+  margin-left: 5%;
+  margin-bottom: 50px;
+}
+
+.askalg-msg {
+  margin-top: 0px;
+  margin-bottom: 40px;
+  padding: 5px 0px 5px 0px;
+  box-sizing: border-box;
+  border: solid 1px gray
+}
+
+.askalg-msg_main {
+  margin-top: 0px;
+  margin-bottom: 40px;
+  padding: 5px 0px 30px 0px;
+  border-bottom: solid 1px black;
+  box-sizing: border-box;
+}
+
+.askalg-msg_main_text {
+  height: 180px;
+  overflow: hidden;
+}
+.askalg-msg_theme {
+  margin-top: 0px;
+  margin-bottom: 14px;
+}
+.askalg-msg_text {
+  height: 82px;
+  overflow: hidden;
+}
+.askalg-btn_like {
+  margin-top: 0px;
+}
+
+.askalg-like_counter {
+  margin-top: 6px;
+}
+
+.askalg-like_counter_badge {
+  margin-top: 0px;
+}
+
+.askalg-right_block{
+  margin-bottom: 50px;
+}
+
+.askalg-popular_tags {
+  margin-bottom: 20px;
+  margin-left: 10px;
+  font-size: 180%;
+}
+
+.askalg-margin_right_5px {
+  margin-right: 5px;
+}
+.askalg-margin_right_10px {
+  margin-right: 10px;
+}
+.askalg-margin_left_5px {
+  margin-left: 5px;
+}
+.askalg-margin_bottom_10px {
+  margin-bottom: 10px;
+}
+
+.askalg-tags_perl {
+  color: black;
+  font-size: 100%;
+}
+.askalg-tags_python {
+  color: red;
+  font-size: 130%;
+}
+.askalg-tags_ruby {
+  color: black;
+  font-size: 100%;
+}
+.askalg-tags_mysql {
+  color: red;
+  font-size: 150%;
+}
+.askalg-tags_django {
+  color: green;
+  font-size: 120%;
+}
+.askalg-tags_mailru {
+  color: black;
+  font-size: 100%
+}
+.askalg-tags_voloshin {
+  color: black;
+  font-size: 100%;
+}
+.askalg-tags_firefox {
+  color: orange;
+  font-size: 110%;
+}
+
+.askalg-bestmembers {
+  margin-bottom: 20px;
+  margin-left: 10px;
+  font-size: 180%;
+  margin-top: 40px;
+}
+
+.pagination {
+  position: relative;
+  left: 30%;
+}
+
+.askalg-login {
+  right: 50px;
+}
