@@ -23,7 +23,7 @@ ___________________________________________________________________________*/
 
 #include <stdio.h>
 
-int count_pairs(int *a, int *b, int sum){
+int count_pairs(int *a, int *b, int n, int m, int sum){
    int i=0, j=m-1, k=0;
    while(i<n && j>=0){
       if(sum-b[j]==a[i]) k++;
@@ -34,8 +34,8 @@ int count_pairs(int *a, int *b, int sum){
 }
 
 int main(){
-   int a[100000], b[100000], n, m;
-
+   int a[100000], b[100000], n, m, sum;
+   
    scanf("%i", &n);
    for(int i=0; i<n; i++)
       scanf("%i", &a[i]);
@@ -46,7 +46,7 @@ int main(){
 
    scanf("%i", &sum);
 
-   printf("%i", count_pairs(a, b, sum));
+   printf("%i", count_pairs(a, b, n, m, sum));
 
    return 0;
 }
